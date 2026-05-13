@@ -6,8 +6,6 @@
 
 # Dependencies
 node_modules/
-package-lock.json
-yarn.lock
 
 # Playwright & Test Reports
 /test-results/
