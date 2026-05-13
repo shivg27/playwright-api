@@ -1,0 +1,27 @@
+{
+  "name": "playwright-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+  "clean": "node --input-type=module -e \"import fs from 'fs'; fs.rmSync('allure-results', { recursive: true, force: true }); console.log('✓ Cleaned allure-results')\" || echo 'No cleanup needed'",
+  "test": "npm run clean && playwright test",
+  "allure:generate": "allure generate allure-results --clean -o allure-report",
+  "allure:open": "allure open allure-report",
+  "allure:run": "npm run clean && npm run test && npm run allure:generate && npm run allure:open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0",
+    "allure-playwright": "^3.8.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.4.0",
+    "dotenv": "^17.4.2",
+    "zod": "^4.3.6"
+  }
+}
