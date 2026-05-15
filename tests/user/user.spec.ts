@@ -9,8 +9,9 @@ import { createUserPayload } from '../../api/factories/userFactory.js';
 test.describe('User API Tests', () => {
 
     test('GET user details', async () => {
+        console.log("Base URLs:", config.baseURL);
         const userService = new UserService();
-        console.log("Base URL:", config.baseURL);
+        console.log("Base URLs:", config.baseURL);
         await userService.init();
         console.log("Initialized with:", config.baseURL);
         const response = await userService.getUser('2');
