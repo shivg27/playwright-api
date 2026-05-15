@@ -8,7 +8,7 @@ import { createUserPayload } from '../../api/factories/userFactory.js';
 
 test.describe('User API Test', () => {
 
-    test('GET user details', async () => {
+    test('GET user detail', async () => {
         const userService = new UserService();
         console.log("Base URL:", config.baseURL);
         await userService.init();
