@@ -6,7 +6,7 @@ import { ResponseValidator } from '../../core/response/responseValidator.js';
 import { getUserSchema, createUserSchema } from '../../api/models/userSchema.js';
 import { createUserPayload } from '../../api/factories/userFactory.js';
 
-test.describe('User API Test', () => {
+test.describe('User API Tests', () => {
 
     test('GET user details', async () => {
         const userService = new UserService();
