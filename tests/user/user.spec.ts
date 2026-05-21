@@ -17,6 +17,7 @@ test.describe('User API Tests', () => {
 
         const body = await ResponseValidator.validate(response, 200, getUserSchema);
         expect(body.data.id).toBe(2);
+        console.log("User Details:", body.data);
     });
 
     test('CREATE user', async () => {
